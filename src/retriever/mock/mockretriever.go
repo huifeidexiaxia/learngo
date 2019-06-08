@@ -11,8 +11,7 @@ func (r *Retriever) String() string {
 		"Retriever: {Contents=%s}", r.Contents)
 }
 
-func (r *Retriever) Post(url string,
-	form map[string]string) string {
+func (r *Retriever) Post(url string, form map[string]string) string {
 	r.Contents = form["contents"]
 	return "ok"
 }

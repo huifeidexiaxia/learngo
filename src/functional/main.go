@@ -3,16 +3,14 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"functional/fib"
 	"io"
 	"strings"
-
-	"functional/fib"
 )
 
 type intGen func() int
 
-func (g intGen) Read(
-	p []byte) (n int, err error) {
+func (g intGen) Read(p []byte) (n int, err error) {
 	next := g()
 	if next > 10000 {
 		return 0, io.EOF
@@ -32,9 +30,9 @@ func printFileContents(reader io.Reader) {
 }
 
 func main() {
-	//a,b:=2,3
-	//a, b = b, a+b
-	//fmt.Print(a,b)
+	a, b := 2, 3
+	a, b = b, a+b
+	fmt.Print(a, b)
 	var f intGen = fib.Fibonacci()
 	printFileContents(f)
 }

@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+	"runtime"
+)
 
 func adder() func(int) int {
 	sum := 0
@@ -23,8 +27,12 @@ func main() {
 	a := adder2(0)
 	for i := 0; i < 10; i++ {
 		var s int
+		//s, a = a(i)
 		s, a = a(i)
-		fmt.Printf("0 + 1 + ... + %d = %d\n",
+		fmt.Printf("0 + 1 + ... + %d = %d \n",
 			i, s)
+		pointer := reflect.ValueOf(a).Pointer()
+		name := runtime.FuncForPC(pointer).Name()
+		fmt.Println("the func name is %s, address is %x", name, a)
 	}
 }

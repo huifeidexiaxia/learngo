@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path"
 	"strconv"
 	"strings"
 )
@@ -49,9 +50,10 @@ func main() {
 		convertToBin(72387885),
 		convertToBin(0),
 	)
-
+	fmt.Print(path.Base(""))
 	fmt.Println("abc.txt contents:")
-	printFile("basic/branch/abc.txt")
+	//printFile("E:\\go_workspace\\learngo\\src\\basic\\branch\\abc.txt")
+	printFile("src/basic/branch/abc.txt")
 
 	fmt.Println("printing a string:")
 	s := `abc"d"

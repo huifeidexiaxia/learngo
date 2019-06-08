@@ -1,19 +1,17 @@
 package main
 
 import (
+	"errhandling/filelistingserver/filelisting"
 	"log"
 	"net/http"
 	_ "net/http/pprof"
 	"os"
-
-	"imooc.com/ccmouse/learngo/errhandling/filelistingserver/filelisting"
 )
 
 type appHandler func(writer http.ResponseWriter,
 	request *http.Request) error
 
-func errWrapper(
-	handler appHandler) func(
+func errWrapper(handler appHandler) func(
 	http.ResponseWriter, *http.Request) {
 	return func(writer http.ResponseWriter,
 		request *http.Request) {
