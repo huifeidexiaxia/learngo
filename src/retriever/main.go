@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"retriever/mock"
 	"retriever/real"
-	"time"
 )
 
 type Retriever interface {
@@ -16,6 +15,9 @@ type Poster interface {
 		form map[string]string) string
 }
 
+type Parse interface {
+	Parse()
+} 
 const url = "http://www.imooc.com"
 
 func download(r Retriever) string {
@@ -43,29 +45,40 @@ func session(s RetrieverPoster) string {
 }
 
 func main() {
-	var r Retriever
+	//var r Retriever
+	retriever := mock.Retriever{}
+	retriever.Parse()
 
-	mockRetriever := mock.Retriever{
-		Contents: "this is a fake imooc.com"}
-	r = &mockRetriever
-	inspect(r)
+	retriever2 := real.Retriever{}
+	retriever2.Parse()
+	
+	fmt.Print(retriever)
+	fmt.Print(retriever2)
 
-	r = &real.Retriever{
-		UserAgent: "Mozilla/5.0",
-		TimeOut:   time.Minute,
-	}
-	inspect(r)
-
-	// Type assertion
-	if mockRetriever, ok := r.(*mock.Retriever); ok {
-		fmt.Println(mockRetriever.Contents)
-	} else {
-		fmt.Println("r is not a mock retriever")
-	}
-
-	fmt.Println(
-		"Try a session with mockRetriever")
-	fmt.Println(session(&mockRetriever))
+	//mockRetriever := mock.Retriever{
+	//	Contents: "this is a fake imooc.com"}
+	//r = &mockRetriever
+	//inspect(r)
+	//
+	//r = &real.Retriever{
+	//	UserAgent: "Mozilla/5.0",
+	//	TimeOut:   time.Minute,
+	//}
+	//
+	//retriever := mockRetriever
+	//retriever.Get("")
+	//inspect(r)
+	//
+	//// Type assertion
+	//if mockRetriever, ok := r.(*mock.Retriever); ok {
+	//	fmt.Println(mockRetriever.Contents)
+	//} else {
+	//	fmt.Println("r is not a mock retriever")
+	//}
+	//
+	//fmt.Println(
+	//	"Try a session with mockRetriever")
+	//fmt.Println(session(&mockRetriever))
 }
 
 func inspect(r Retriever) {

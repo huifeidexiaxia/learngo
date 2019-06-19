@@ -11,6 +11,11 @@ type Retriever struct {
 	TimeOut   time.Duration
 }
 
+func (r *Retriever) Parse() {
+	r.UserAgent="testReal"
+	r.TimeOut=100
+}
+
 func (r *Retriever) Get(url string) string {
 	resp, err := http.Get(url)
 	if err != nil {

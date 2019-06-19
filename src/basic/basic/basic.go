@@ -82,8 +82,30 @@ func enums() {
 	fmt.Println(cpp, javascript, python, golang)
 	fmt.Println(b, kb, mb, gb, tb, pb)
 }
-
+type Response struct {
+	Code int64 `json:"code"`
+	Msg string `json:"message"`
+	Data interface{}
+}
 func main() {
+	//var resp Response
+	//err:=json.Unmarshal([]byte(` {"code":200,"message":"success","data":"Macbook Pro 2018 款"}`),&resp)
+	//if err !=nil {
+	//	return
+	//}else {
+	//	fmt.Println(resp)
+	//}
+	//
+	//bytes, err := json.Marshal(resp)
+	//s2 := string(bytes)
+	//
+	//fmt.Print(s2)
+	//fmt.Println(s2==` {"code":200,"msg":"success","data":"Macbook Pro 2018 款"}`)
+	//fmt.Println(s2==" {\"code\":200,\"msg\":\"success\",\"data\":\"Macbook Pro 2018 款\"}")
+	//fmt.Println(`{"code":200,"msg":"success","data":"Macbook Pro 2018 款"}`)
+	//fmt.Println("{\"code\":200,\"msg\":\"success\",\"data\":\"Macbook Pro 2018 款\"}")
+
+
 	fmt.Println("Hello world")
 	variableZeroValue()
 	variableInitialValue()

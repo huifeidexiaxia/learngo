@@ -6,6 +6,11 @@ type Retriever struct {
 	Contents string
 }
 
+func (r *Retriever) Parse() {
+	r.Contents="aaa"
+
+}
+
 func (r *Retriever) String() string {
 	return fmt.Sprintf(
 		"Retriever: {Contents=%s}", r.Contents)
