@@ -15,7 +15,7 @@ func tryDefer() {
 		if i == 30 {
 			// Uncomment panic to see
 			// how it works with defer
-			// panic("printed too many")
+			panic("printed too many")
 		}
 	}
 }
@@ -47,6 +47,6 @@ func writeFile(filename string) {
 }
 
 func main() {
-	tryDefer()
+	//tryDefer()
 	writeFile("fib.txt")
 }

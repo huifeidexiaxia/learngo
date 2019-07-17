@@ -29,8 +29,12 @@ func (s Student) Set(name string, age int, score float32, sex string) {
 
 func TestStruct(a interface{}) {
 	tye := reflect.TypeOf(a)
+	fmt.Println(tye)
+	
 	val := reflect.ValueOf(a)
+	fmt.Println(val)
 	kd := val.Kind()
+	fmt.Println(kd)
 	if kd != reflect.Ptr && val.Elem().Kind() == reflect.Struct {
 		fmt.Println("expect struct")
 		return
@@ -41,6 +45,7 @@ func TestStruct(a interface{}) {
 	for i := 0; i < num; i++ {
 		fmt.Printf("%d %v\n", i, val.Elem().Field(i).Kind())
 	}
+	fmt.Println(a)
 
 	fmt.Printf("struct has %d fields\n", num)
 
@@ -54,7 +59,7 @@ func TestStruct(a interface{}) {
 }
 
 func main() {
-	var a Student = Student{
+	var a  = Student{
 		Name:  "stu01",
 		Age:   18,
 		Score: 92.8,

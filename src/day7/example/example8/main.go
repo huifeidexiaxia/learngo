@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"os"
 )
 
 type User struct {
@@ -59,7 +60,9 @@ func testMap() {
 		return
 	}
 
-	fmt.Printf("%s\n", string(data))
+	n, err := fmt.Fprint(os.Stdout, "\n", string(data))
+	fmt.Println(n)
+	//fmt.Printf("%s\n", string(data))
 }
 
 func testSlice() {
