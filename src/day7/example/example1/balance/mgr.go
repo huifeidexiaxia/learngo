@@ -16,9 +16,7 @@ func (p *BalanceMgr) registerBalancer(name string, b Balancer) {
 
 func RegisterBalancer(name string, b Balancer) {
 	mgr.registerBalancer(name, b)
-	//mgr.allBalancer[name]=b
 }
-
 
 func DoBalance(name string, insts []*Instance) (inst *Instance, err error) {
 	balancer, ok := mgr.allBalancer[name]
@@ -28,7 +26,6 @@ func DoBalance(name string, insts []*Instance) (inst *Instance, err error) {
 	}
 
 	fmt.Printf("use %s balancer\n", name)
-	fmt.Printf("use %s balancer\n", balancer)
 	inst, err = balancer.DoBalance(insts)
 	return
 }

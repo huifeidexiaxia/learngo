@@ -20,10 +20,10 @@ func test(b interface{}) {
 	fmt.Println(k)
 
 	iv := v.Interface()
-	if stu, ok := iv.(Student);ok{
+	stu, ok := iv.(Student)
+	if ok {
 		fmt.Printf("%v %T\n", stu, stu)
 	}
-
 }
 
 func testInt(b interface{}) {
