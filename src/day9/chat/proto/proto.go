@@ -1,6 +1,6 @@
 package proto
 
-import "go_dev/day9/chat/common"
+import "day9/chat/common"
 
 type Message struct {
 	Cmd  string `json:"cmd"`

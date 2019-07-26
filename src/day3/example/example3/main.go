@@ -9,7 +9,7 @@ import (
 func main() {
 
 	str := "   hello world abc   \n"
-	result := strings.Replace(str, "world", "you", 1)
+	result := strings.Replace(str, "world", "you", 0)
 	fmt.Println("replace:", result)
 
 	count := strings.Count(str, "l")

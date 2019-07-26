@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/astaxie/beego"
-	_ "go_dev/day14/SecKill/SecAdmin/router"
+	_ "day14/SecKill/SecAdmin/router"
 	"fmt"
 )
 

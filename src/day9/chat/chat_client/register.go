@@ -4,7 +4,7 @@ import (
 	"encoding/binary"
 	"encoding/json"
 	"fmt"
-	"go_dev/day9/chat/proto"
+	"day9/chat/proto"
 	"net"
 )
 

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go_dev/day7/example/example1/balance"
+	"day7/example/example1/balance"
 	"hash/crc32"
 	"math/rand"
 )

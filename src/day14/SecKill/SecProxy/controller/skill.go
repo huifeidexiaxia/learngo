@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"go_dev/day14/SecKill/SecProxy/service"
+	"day14/SecKill/SecProxy/service"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"

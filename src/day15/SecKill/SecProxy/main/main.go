@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "go_dev/day14/SecKill/SecProxy/router"
+	_ "day14/SecKill/SecProxy/router"
 
 	"github.com/astaxie/beego"
 )

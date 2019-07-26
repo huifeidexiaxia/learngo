@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"go_dev/day14/SecKill/SecProxy/service"
+	"day14/SecKill/SecProxy/service"
 	"time"
 
 	"golang.org/x/net/context"

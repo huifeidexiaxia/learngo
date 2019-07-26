@@ -4,7 +4,7 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 //	"fmt"
-	"go_dev/day14/SecKill/SecAdmin/model"
+	"day14/SecKill/SecAdmin/model"
 	"fmt"
 	"net/http"
 )

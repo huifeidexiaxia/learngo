@@ -14,19 +14,19 @@ func urlProcess(url string) string {
 
 	return url
 }
-
-strings.TrimSpace(" sksk ") =>"sksk"
-strings.Trim("abbacba", "ab") =>"c"
-strings.TrimLeft("a","b")
-strings.TrimRight("b","c")
-"heheheworld", "he", "wo", 0
-
-strings.Fields("abc cde edk") ["abc", "cde", "edk]
-
-strings.Split("abc,cde,edk", ",") ["abc", "cde", "edk]
-strings.Join(["abc", "cde", "edk], ",") "abc,cde,edk"
-
-strings.Replace("str", 3) "strstrstr"
+//
+//strings.TrimSpace(" sksk ") =>"sksk"
+//strings.Trim("abbacba", "ab") =>"c"
+//strings.TrimLeft("a","b")
+//strings.TrimRight("b","c")
+//"heheheworld", "he", "wo", 0
+//
+//strings.Fields("abc cde edk") ["abc", "cde", "edk]
+//
+//strings.Split("abc,cde,edk", ",") ["abc", "cde", "edk]
+//strings.Join(["abc", "cde", "edk], ",") "abc,cde,edk"
+//
+//strings.Replace("str", 3) "strstrstr"
 func pathProcess(path string) string {
 	result := strings.HasSuffix(path, "/")
 	if !result {

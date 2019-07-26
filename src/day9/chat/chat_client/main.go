@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go_dev/day9/chat/proto"
+	"day9/chat/proto"
 	"net"
 )
 

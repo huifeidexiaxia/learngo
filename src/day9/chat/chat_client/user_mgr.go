@@ -1,8 +1,8 @@
 package main
 
 import "fmt"
-import "go_dev/day9/chat/common"
-import "go_dev/day9/chat/proto"
+import "day9/chat/common"
+import "day9/chat/proto"
 
 var onlineUserMap map[int]*common.User = make(map[int]*common.User, 16)
 

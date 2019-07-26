@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"go_dev/day9/chat/proto"
+	"day9/chat/proto"
 	"net"
 )
 

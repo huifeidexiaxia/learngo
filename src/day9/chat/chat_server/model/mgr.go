@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"encoding/json"
-	"go_dev/day9/chat/common"
+	"day9/chat/common"
 
 	"github.com/garyburd/redigo/redis"
 )

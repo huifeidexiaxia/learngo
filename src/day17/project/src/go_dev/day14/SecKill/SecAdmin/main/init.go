@@ -4,7 +4,7 @@ import (
 	"github.com/astaxie/beego/logs"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
-	"go_dev/day14/SecKill/SecAdmin/model"
+	"day14/SecKill/SecAdmin/model"
 	etcd_client "github.com/coreos/etcd/clientv3"
 	"fmt"
 	"time"
