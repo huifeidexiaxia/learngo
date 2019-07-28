@@ -1,8 +1,9 @@
 package main
 
 import (
+	"day9/book_mgr/model"
 	"fmt"
-	"model"
+
 	"strings"
 )
 

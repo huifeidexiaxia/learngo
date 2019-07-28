@@ -65,8 +65,8 @@ func testSlice4() {
 }
 
 func main() {
-	//testSlice()
+	testSlice()
 	//testSlice2()
 	//testSlice3()
-	testSlice4()
+	//testSlice4()
 }

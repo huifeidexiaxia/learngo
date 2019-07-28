@@ -26,7 +26,7 @@ func testSlice() {
 func testCopy() {
 
 	var a []int = []int{1, 2, 3, 4, 5, 6}
-	b := make([]int, 1)
+	b := make([]int, len(a))
 
 	copy(b, a)
 
@@ -56,7 +56,7 @@ func testModifyString() {
 
 func main() {
 	//testSlice()
-	//testCopy()
+	testCopy()
 	//testString()
-	testModifyString()
+	//testModifyString()
 }

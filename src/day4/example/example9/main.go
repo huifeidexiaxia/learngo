@@ -34,8 +34,8 @@ func testIntSearch() {
 }
 
 func main() {
-	//testIntSort()
-	//testStrings()
-	//testFloat()
+	testIntSort()
+	testStrings()
+	testFloat()
 	testIntSearch()
 }

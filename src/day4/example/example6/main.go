@@ -44,7 +44,7 @@ func testArray2() {
 }
 
 func main() {
-	//testArray()
-	testArray2()
-	fab(10)
+	testArray()
+	//testArray2()
+	//fab(10)
 }

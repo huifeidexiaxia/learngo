@@ -34,9 +34,9 @@ func test2() {
 
 func main() {
 
-	//test1()
-	test2()
-	var a [5]int
-	test3(&a)
-	fmt.Println(a)
+	test1()
+	//test2()
+	//var a [5]int
+	//test3(&a)
+	//fmt.Println(a)
 }

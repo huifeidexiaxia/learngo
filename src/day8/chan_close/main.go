@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 	var ch chan int
@@ -10,14 +13,18 @@ func main() {
 		ch <- i
 	}
 
-	close(ch)
+	//close(ch)
 	for {
 		var b int
-		b = <-ch
+
+		// 如果Ok==false，说明chan 已经关掉了
+		b, ok := <-ch
 		if ok == false {
 			fmt.Println("chan is close")
 			break
 		}
 		fmt.Println(b)
 	}
+
+	time.Sleep(1 * time.Second)
 }

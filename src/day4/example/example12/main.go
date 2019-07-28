@@ -75,6 +75,7 @@ func testRWLock() {
 }
 
 func main() {
+	fmt.Println(rand.Intn(100))
 	//testMap()
-	testRWLock()
+	//testRWLock()
 }
