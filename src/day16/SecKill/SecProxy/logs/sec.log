@@ -153,7 +153,7 @@
 2017/09/16 15:40:40 [D] [init.go:134] sec info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]]
 2017/09/16 15:40:41 [E] [service.go:58] ping redis failed, err:dial tcp 192.168.14.200:6379: connectex: No connection could be made because the target machine actively refused it.
 2017/09/16 15:40:41 [E] [service.go:22] init black redis failed, err:dial tcp 192.168.14.200:6379: connectex: No connection could be made because the target machine actively refused it.
-2017/09/16 15:40:41 [D] [init.go:140] init service succ, config:&{{192.168.14.200:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/secskill/ /oldboy/backend/secskill/product} ./logs/sec.log debug map[1029:0xc0422022d0 1027:0xc042202300] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com qq.com/secskill] map[] map[] {50 1 500 10} 0xc04221e180 <nil>}
+2017/09/16 15:40:41 [D] [init.go:140] init service succ, config:&{{192.168.14.200:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/secskill/ /oldboy/backend/secskill/product} ./logs/sec.log debug map[1029:0xc0422022d0 1027:0xc042202300] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [192.168.100.200 baidu.com qq.com/secskill] map[] map[] {50 1 500 10} 0xc04221e180 <nil>}
 2017/09/16 15:40:41 [I] [main.go:17] init sec succ
 2017/09/16 15:40:41 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9091
 2017/09/16 15:40:42 [D] [asm_amd64.s:2197] begin watch key:/oldboy/backend/secskill/product
@@ -171,7 +171,7 @@
 2017/09/16 15:42:08 [D] [init.go:134] sec info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]]
 2017/09/16 15:42:09 [E] [service.go:58] ping redis failed, err:dial tcp 192.168.14.200:6379: connectex: No connection could be made because the target machine actively refused it.
 2017/09/16 15:42:09 [E] [service.go:22] init black redis failed, err:dial tcp 192.168.14.200:6379: connectex: No connection could be made because the target machine actively refused it.
-2017/09/16 15:42:09 [D] [init.go:140] init service succ, config:&{{192.168.14.200:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/secskill/ /oldboy/backend/secskill/product} ./logs/sec.log debug map[1029:0xc0421fc300 1027:0xc0421fc330] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com qq.com/secskill] map[] map[] {50 1 500 10} 0xc04222e180 <nil>}
+2017/09/16 15:42:09 [D] [init.go:140] init service succ, config:&{{192.168.14.200:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/secskill/ /oldboy/backend/secskill/product} ./logs/sec.log debug map[1029:0xc0421fc300 1027:0xc0421fc330] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [192.168.100.200 baidu.com qq.com/secskill] map[] map[] {50 1 500 10} 0xc04222e180 <nil>}
 2017/09/16 15:42:09 [I] [main.go:17] init sec succ
 2017/09/16 15:42:09 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9091
 2017/09/16 15:42:10 [D] [asm_amd64.s:2197] begin watch key:/oldboy/backend/secskill/product

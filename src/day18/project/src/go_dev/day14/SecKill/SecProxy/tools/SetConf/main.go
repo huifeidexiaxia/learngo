@@ -24,7 +24,7 @@ type SecInfoConf struct {
 
 func SetLogConfToEtcd() {
 	cli, err := clientv3.New(clientv3.Config{
-		Endpoints:   []string{"localhost:2379", "localhost:22379", "localhost:32379"},
+		Endpoints:   []string{"192.168.100.200:2379", "192.168.100.200:22379", "192.168.100.200:32379"},
 		DialTimeout: 5 * time.Second,
 	})
 	if err != nil {

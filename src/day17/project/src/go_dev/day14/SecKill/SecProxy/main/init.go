@@ -1,9 +1,9 @@
 package main
 
 import (
+	"day14/SecKill/SecProxy/service"
 	"encoding/json"
 	"fmt"
-	"day14/SecKill/SecProxy/service"
 	"time"
 
 	"golang.org/x/net/context"
@@ -151,7 +151,7 @@ func initSecProductWatcher() {
 func watchSecProductKey(key string) {
 
 	cli, err := etcd_client.New(etcd_client.Config{
-		Endpoints:   []string{"localhost:2379", "localhost:22379", "localhost:32379"},
+		Endpoints:   []string{"192.168.100.200:2379", "192.168.100.200:22379", "192.168.100.200:32379"},
 		DialTimeout: 5 * time.Second,
 	})
 	if err != nil {

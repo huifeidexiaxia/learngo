@@ -21,7 +21,7 @@ func GetHost(log string) string {
 	return host
 }
 func GetOffset(topic string, partition int32, date string) (start int64, end int64) {
-	client, err := NewConsumer([]string{"localhost:9092"}, nil)
+	client, err := NewConsumer([]string{"192.168.100.200:9092"}, nil)
 	partiConsumer, err := client.ConsumePartition(topic, partition, OffsetOldest)
 	if err != nil {
 		fmt.Println(err, "get low")

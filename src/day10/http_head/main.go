@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"net/http"
 	"net"
+	"net/http"
 	"time"
 )
 
@@ -16,10 +16,11 @@ var url = []string{
 func main() {
 
 	for _, v := range url {
+		// 实现一个自己定义 的httpclient,设置了超时时间，可以到golang官网上来查看具体的example
 		c := http.Client{
-			Transport: &http.Transport {
-				Dial:func(network, addr string) (net.Conn, error){
-					timeout := time.Second*2
+			Transport: &http.Transport{
+				Dial: func(network, addr string) (net.Conn, error) {
+					timeout := time.Second * 2
 					return net.DialTimeout(network, addr, timeout)
 				},
 			},

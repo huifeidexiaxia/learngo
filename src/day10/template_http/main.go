@@ -38,11 +38,13 @@ func userInfo(w http.ResponseWriter, r *http.Request) {
 
 	resultWriter := &Result{}
 	io.WriteString(resultWriter, "hello world")
+
 	err := myTemplate.Execute(w, arr)
 	if err != nil {
 		fmt.Println(err)
 	}
 	fmt.Println("template render data:", resultWriter.output)
+	// todo : 这里的w是一个接口，如果定义为网络，那么就写到网络上，如果定义到文件，就写到文件中，
 	//myTemplate.Execute(w, p)
 	//myTemplate.Execute(os.Stdout, p)
 	//file, err := os.OpenFile("C:/test.log", os.O_CREATE|os.O_WRONLY, 0755)
@@ -63,7 +65,7 @@ func initTemplate(filename string) (err error) {
 }
 
 func main() {
-	initTemplate("d:/project/src/go_dev/day10/template_http/index.html")
+	initTemplate(`E:\go_workspace\learngo\src\day10\template_http\index.html`)
 	http.HandleFunc("/user/info", userInfo)
 	err := http.ListenAndServe("0.0.0.0:8880", nil)
 	if err != nil {

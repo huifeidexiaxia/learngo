@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"day9/chat/proto"
+	"fmt"
 	"net"
 )
 
@@ -20,7 +20,7 @@ func main() {
 
 	fmt.Scanf("%d %s\n", &userId, &passwd)
 
-	conn, err := net.Dial("tcp", "localhost:10000")
+	conn, err := net.Dial("tcp", "192.168.100.200:10000")
 	if err != nil {
 		fmt.Println("Error dialing", err.Error())
 		return
