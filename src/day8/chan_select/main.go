@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 	var ch chan int
@@ -10,14 +12,16 @@ func main() {
 	go func() {
 		var i int
 		for {
+			time.Sleep(time.Second * 2)
 			ch <- i
-			time.Sleep(time.Second)
+			time.Sleep(time.Second * 3)
 			ch2 <- i * i
-			time.Sleep(time.Second)
+
 			i++
 		}
 	}()
-	for {
+
+	for i := 0; i < 3; i++ {
 		select {
 		case v := <-ch:
 			fmt.Println(v)
