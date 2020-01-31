@@ -1,0 +1,12 @@
+test:
+  cache:
+    enable: false
+    list:
+    - redis
+    - mongoDB
+  mysql:
+    host: 10.11.22.33
+    name: cwi
+    password: Tech2501
+    port: 3306
+    user: root
