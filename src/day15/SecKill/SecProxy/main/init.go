@@ -118,13 +118,13 @@ func initSec() (err error) {
 		logs.Error("init logger failed, err:%v", err)
 		return
 	}
-	/*
-		err = initRedis()
-		if err != nil {
-			logs.Error("init redis failed, err:%v", err)
-			return
-		}
-	*/
+
+	err = initRedis()
+	if err != nil {
+		logs.Error("init redis failed, err:%v", err)
+		return
+	}
+
 	err = initEtcd()
 	if err != nil {
 		logs.Error("init etcd failed, err:%v", err)

@@ -1,8 +1,8 @@
 package main
 
 import (
+	"day18/project/src/go_dev/day14/SecKill/SecProxy/service"
 	"fmt"
-	"day14/SecKill/SecProxy/service"
 
 	"strings"
 
